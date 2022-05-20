@@ -1,4 +1,6 @@
 import {Component, Input} from "@angular/core";
+import { ProductsPageComponent } from "../products-page/products-page.component";
+
 
 @Component({
   selector: "app-product-listing",

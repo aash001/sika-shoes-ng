@@ -1,11 +1,18 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
 import { Product } from './product.model';
-import * as products from '../assets/products.json'
 
+export type ProductsResponse = {
+  products: Product[];
+}
 @Injectable({
   providedIn: 'root',
 })
-export class ShoeServiceService {
-  constructor() {}
 
+export class ShoeServiceService {
+  constructor(private http: HttpClient) {}
+
+  getProducts(){
+    return this.http.get<ProductsResponse>("../assets/products.json");
+  }
 }
