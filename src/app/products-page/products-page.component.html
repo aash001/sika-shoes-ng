@@ -4,13 +4,9 @@
   <ng-template #productList>
     <ul #productList>
       <li *ngFor="let product of products">
-        <a href="#">
-          <app-product-listing
-            id="{{product.id}}"
-            [name]="product.name"
-            [description]="product.description"
-            [imageUrl]="product.imageUrl"
-          >
+        <a routerLink="#">
+          <app-product-listing id="{{product.id}}" [name]="product.name" [description]="product.description"
+            [imageUrl]="product.imageUrl">
           </app-product-listing>
         </a>
       </li>
