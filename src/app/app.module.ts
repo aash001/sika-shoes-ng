@@ -10,6 +10,7 @@ import {ProductsPageComponent} from "./products-page/products-page.component";
 import {NavBarComponent} from "./nav-bar/nav-bar.component";
 import {ProductListingComponent} from "./product-listing/product-listing.component";
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
