@@ -7,19 +7,19 @@ import { ProductPageComponent } from './product-page/product-page.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomePageComponent,
-    pathMatch: 'full',
-  },
-  {
+  },{
+    path: "",
+    redirectTo: "/home",
+    pathMatch: "full"
+  },{
     path: 'products',
     component: ProductsPageComponent,
-  },
-  {
+  },{
     path: 'about',
     component: AboutPageComponent,
-  },
-  {
+  },{
     path: 'product',
     component: ProductPageComponent,
   },
