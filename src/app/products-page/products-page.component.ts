@@ -1,6 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {Product} from "../product.model"
-import { ShoeServiceService, ProductsResponse } from "../shoe-service.service";
+import { ShoeServiceService } from "../shoe-service.service";
+import { ActivatedRoute, RouteConfigLoadEnd } from "@angular/router";
 
 @Component({
   selector: "app-products-page",
@@ -10,8 +11,10 @@ import { ShoeServiceService, ProductsResponse } from "../shoe-service.service";
 export class ProductsPageComponent implements OnInit {
   products: Product[] = [];
   error = false
-  constructor(private shoeServiceService: ShoeServiceService) {
+  constructor(private shoeServiceService: ShoeServiceService, private route: ActivatedRoute) {
   }
+
+
   ngOnInit() {
     this.shoeServiceService.getProducts().subscribe(products => {
       this.products = products.products;
