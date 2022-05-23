@@ -1,4 +1,4 @@
-Netlify: https://628b8b44a700c14dafe7fef9--genuine-fairy-584b64.netlify.app/home
+Netlify: https://628b8b44a700c14dafe7fef9--genuine-fairy-584b64.netlify.app/
 
 # Sika Shoes: Routing and Services
 
